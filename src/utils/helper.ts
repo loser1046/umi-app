@@ -10,7 +10,7 @@ export const getToken = ():any => {
   } catch (e) {
     jsonToken = {}
   }
-  // console.log("获取localstorage:", jsonToken)
+  console.log("获取localstorage:", jsonToken)
   return jsonToken;
 };
 

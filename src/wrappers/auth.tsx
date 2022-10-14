@@ -8,10 +8,14 @@ export default (props:any)=> {
     //     console.log("全局初始状态用户信息:",initialState?.userInfo,loading)
     // }
 
+    // const {user} = useModel('user',(model)=>({
+    //     user:model.getUser()
+    // }))
     const {user} = useModel('user',(model)=>({
-        user:model.getUser()
+        user:model.user
     }))
-    // console.log("中间键里获取到的用户信息:",user,getToken(),props)
+    console.log("中间键里获取到的用户信息:",user,getToken(),props)
+    // debugger
     const isLogin = user.token ? true : false
     // let navigate = useNavigate()
     // console.log("@@@@@",history)

@@ -4,11 +4,11 @@
 declare namespace API {
   type userInfo = {
     id: Number; 
-    name: String, 
-    token: String
+    name: string, 
+    token: string
   }
   type loginRequest = {
-    phone ?: String
+    phone ?: string
   }
   type loginResponse = {
     code?: number;
@@ -16,10 +16,10 @@ declare namespace API {
     data:userInfo
   };
   type IpResponse = {
-    status:String,
-    country:String,
-    regionName:String,
-    city:String,
-    query:String
+    status:string,
+    country:string,
+    regionName:string,
+    city:string,
+    query:string
   }
 }

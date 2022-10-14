@@ -11,8 +11,8 @@ export default defineConfig({
     '@umijs/plugins/dist/model',
     '@umijs/plugins/dist/request',
   ],
-  initialState: {},
   model: {},
+  initialState: {},
   // mock: false,
   mock:{},
   request: {

@@ -1,12 +1,13 @@
 import { Link, Outlet, useModel } from 'umi';
 import styles from './index.less';
+import { MetaMaskProvider } from 'metamask-react';
 
 export default function Layout() {
   // const { initialState, loading, error, refresh, setInitialState } = useModel('@@initialState');
   // let user_info: any = initialState?.userInfo
-  const { clearUser,user } = useModel('user', (model) => ({
+  const { clearUser, user } = useModel('user', (model) => ({
     clearUser: model.clearUser,
-    user:model.user
+    user: model.user
   }))
   function logOut() {
     clearUser()
@@ -29,7 +30,9 @@ export default function Layout() {
 
       </ul>
 
-      <Outlet />
+      <MetaMaskProvider>
+        <Outlet />
+      </MetaMaskProvider>
     </div>
   );
 }

@@ -22,6 +22,8 @@ const Login: React.FC = (props: any) => {
         updateUser(res as API.userInfo)
         let redirectUrl = fullpath.get('path')
         console.log("要跳回的路径", redirectUrl)
+        console.log("登录跳转前model中的用户信息:",user)
+        debugger
         history.replace(redirectUrl ? redirectUrl : '/')
     }
     return (
