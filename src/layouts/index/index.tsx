@@ -1,6 +1,7 @@
 import { Link, Outlet, useModel } from 'umi';
 import styles from './index.less';
 import { MetaMaskProvider } from 'metamask-react';
+import { ConfigProvider } from 'antd';
 
 export default function Layout() {
   // const { initialState, loading, error, refresh, setInitialState } = useModel('@@initialState');
@@ -29,10 +30,12 @@ export default function Layout() {
         <button onClick={logOut}>退出登录</button>
 
       </ul>
+      <ConfigProvider>
+        <MetaMaskProvider>
+          <Outlet />
+        </MetaMaskProvider>
+      </ConfigProvider>
 
-      <MetaMaskProvider>
-        <Outlet />
-      </MetaMaskProvider>
     </div>
   );
 }

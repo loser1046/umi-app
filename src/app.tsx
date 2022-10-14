@@ -1,6 +1,8 @@
 // 运行时配置文件，可以在这里扩展运行时的能力，比如修改路由、修改 render 方法等
 import type { RequestConfig } from 'umi';
-import { getToken } from './utils/helper';
+import { getToken, getTheme } from './utils/helper';
+import React from 'react';
+import { ConfigProvider } from 'antd';
 
 console.log("全局的配置文件")
 
@@ -8,6 +10,19 @@ console.log("全局的配置文件")
 export function onRouteChange({ location, clientRoutes, action, basename }) {
     // console.log("路由跳转:", location, clientRoutes, action, basename)
 }
+
+ConfigProvider.config({
+    theme: {
+        // primaryColor: '#25b864',// 全局主色
+        primaryColor: getTheme(),// 全局主色
+    },
+});
+
+export function rootContainer(container: any) {
+    return React.createElement(ConfigProvider, null, container);
+}
+
+
 
 //这里可以定义全局的初始状态 Model (
 //其实就是利用model去实现了相关功能,如果单独维护有一份全局用户状态数据,这里定义意义不大

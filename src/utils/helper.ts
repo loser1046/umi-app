@@ -10,8 +10,13 @@ export const getToken = ():any => {
   } catch (e) {
     jsonToken = {}
   }
-  console.log("获取localstorage:", jsonToken)
+  // console.log("获取localstorage:", jsonToken)
   return jsonToken;
+};
+export const getTheme = ():string => {
+  const theme :string = localStorage.getItem('theme') || '#ffffff';
+  console.log("获取主题色:", theme)
+  return theme;
 };
 
 export const deleteToken = () => {

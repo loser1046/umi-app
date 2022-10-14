@@ -18,12 +18,12 @@ const Login: React.FC = (props: any) => {
 
     async function toLogin() {
         const res = await loginRequest.run({ phone: "120119111" })
-        console.log("登录结果", res)
+        // console.log("登录结果", res)
         updateUser(res as API.userInfo)
         let redirectUrl = fullpath.get('path')
-        console.log("要跳回的路径", redirectUrl)
-        console.log("登录跳转前model中的用户信息:",user)
-        debugger
+        // console.log("要跳回的路径", redirectUrl)
+        // console.log("登录跳转前model中的用户信息:",user)
+        // debugger
         history.replace(redirectUrl ? redirectUrl : '/')
     }
     return (

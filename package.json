@@ -11,6 +11,7 @@
     "start": "cross-env UMI_ENV=development npm run dev"
   },
   "dependencies": {
+    "antd": "^4.23.5",
     "axios": "^1.1.2",
     "metamask-react": "^2.4.0",
     "umi": "^4.0.24"

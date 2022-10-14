@@ -19,12 +19,12 @@ export default () => {
         // return user
     }
     const updateUser = useCallback((userInfo: userInfo) => {
-        console.log("更新前user", user)
-        console.log("开始更新user", userInfo)
+        // console.log("更新前user", user)
+        // console.log("开始更新user", userInfo)
         setToken(JSON.stringify(userInfo))
         setUser(userInfo)
-        console.log("更新后user", user)
-        debugger
+        // console.log("更新后user", user)
+        // debugger
     }, [])
 
     const clearUser = useCallback(() => {

@@ -28,5 +28,6 @@ export default [
             path: '/info/:id',
             component: 'info'
         }]
-    }
+    },
+    { path: '*', component: '404' }
 ]
