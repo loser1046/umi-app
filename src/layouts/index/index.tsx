@@ -30,11 +30,11 @@ export default function Layout() {
         <button onClick={logOut}>退出登录</button>
 
       </ul>
-      <ConfigProvider>
+      {/* <ConfigProvider> */}
         <MetaMaskProvider>
           <Outlet />
         </MetaMaskProvider>
-      </ConfigProvider>
+      {/* </ConfigProvider> */}
 
     </div>
   );

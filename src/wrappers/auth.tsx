@@ -5,7 +5,7 @@ import { useEffect } from "react"
 export default (props:any)=> {
     // const { initialState, loading, error, refresh, setInitialState } = useModel('@@initialState');
     // if(!loading){
-    //     console.log("全局初始状态用户信息:",initialState?.userInfo,loading)
+        // console.log("全局初始状态用户信息:",initialState,initialState?.userInfo,loading)
     // }
 
     const {user} = useModel('user',(model)=>({
